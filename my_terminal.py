@@ -67,35 +67,29 @@ val_parity.set('N')  # initialize
 lbframe_parity = tk.LabelFrame(frame_choose_options, text="Parity", padx=5, pady=5)
 # PARITY_NONE, PARITY_EVEN, PARITY_ODD, PARITY_MARK, PARITY_SPACE = 'N', 'E', 'O', 'M', 'S'
 
-rd_parity_none = Radiobutton(lbframe_parity, text="none", variable=val_parity, value='N').grid(column=0, row=0,
-                                                                                               sticky='W')
-rd_parity_odd = Radiobutton(lbframe_parity, text="odd", variable=val_parity, value='O').grid(column=0, row=1,
-                                                                                             sticky='W')
-rd_parity_even = Radiobutton(lbframe_parity, text="even", variable=val_parity, value='E').grid(column=0, row=2,
-                                                                                               sticky='W')
-rd_parity_mark = Radiobutton(lbframe_parity, text="mark", variable=val_parity, value='M').grid(column=0, row=3,
-                                                                                               sticky='W')
-rd_parity_space = Radiobutton(lbframe_parity, text="space", variable=val_parity, value='S').grid(column=0, row=4,
-                                                                                                 sticky='W')
-# val_parity.set(1)
+rd_parity_none = Radiobutton(lbframe_parity, text="none", variable=val_parity,
+                             value='N').grid(column=0, row=0,sticky='W')
+rd_parity_odd = Radiobutton(lbframe_parity, text="odd", variable=val_parity,
+                            value='O').grid(column=0, row=1,sticky='W')
+rd_parity_even = Radiobutton(lbframe_parity, text="even", variable=val_parity,
+                             value='E').grid(column=0, row=2,sticky='W')
+rd_parity_mark = Radiobutton(lbframe_parity, text="mark", variable=val_parity,
+                             value='M').grid(column=0, row=3,sticky='W')
+rd_parity_space = Radiobutton(lbframe_parity, text="space", variable=val_parity,
+                              value='S').grid(column=0, row=4,sticky='W')
 
 val_databits = tk.IntVar()
 val_databits.set(serial.EIGHTBITS)  # initialize
 
 lbframe_databits = tk.LabelFrame(frame_choose_options, text="Parity", padx=5, pady=5)
-rd_8bit = Radiobutton(lbframe_databits, text="8 bits", variable=val_databits, value=serial.EIGHTBITS).grid(column=0,
-                                                                                                           row=0,
-                                                                                                           sticky='W')
-rd_7bit = Radiobutton(lbframe_databits, text="7 bits", variable=val_databits, value=serial.SEVENBITS).grid(column=0,
-                                                                                                           row=1,
-                                                                                                           sticky='W')
-rd_6bit = Radiobutton(lbframe_databits, text="6 bits", variable=val_databits, value=serial.SIXBITS).grid(column=0,
-                                                                                                         row=2,
-                                                                                                         sticky='W')
-rd_5bit = Radiobutton(lbframe_databits, text="5 bits", variable=val_databits, value=serial.FIVEBITS).grid(column=0,
-                                                                                                          row=3,
-                                                                                                          sticky='W')
-# val_databits.set(8)
+rd_8bit = Radiobutton(lbframe_databits, text="8 bits", variable=val_databits,
+                      value=serial.EIGHTBITS).grid(column=0,row=0,sticky='W')
+rd_7bit = Radiobutton(lbframe_databits, text="7 bits", variable=val_databits,
+                      value=serial.SEVENBITS).grid(column=0,row=1,sticky='W')
+rd_6bit = Radiobutton(lbframe_databits, text="6 bits", variable=val_databits,
+                      value=serial.SIXBITS).grid(column=0,row=2,sticky='W')
+rd_5bit = Radiobutton(lbframe_databits, text="5 bits", variable=val_databits,
+                      value=serial.FIVEBITS).grid(column=0,row=3,sticky='W')
 
 
 val_stopbits = tk.IntVar()
@@ -104,27 +98,21 @@ val_stopbits.set(1)  # initialize
 lbframe_stopbits = tk.LabelFrame(frame_choose_options, text="Stop Bits", padx=5, pady=5)
 
 rd_1bit = Radiobutton(lbframe_stopbits, text="1 bit", variable=val_stopbits, value=1).grid(column=0, row=0, sticky='W')
-rd_2bits = Radiobutton(lbframe_stopbits, text="2 bits", variable=val_stopbits, value=2).grid(column=0, row=1,
-                                                                                             sticky='W')
-# val_stopbits.set(1)
+rd_2bits = Radiobutton(lbframe_stopbits, text="2 bits", variable=val_stopbits, value=2).grid(column=0, row=1,sticky='W')
 
 val_hwflowcontrol = StringVar()
 val_hwflowcontrol.set(0)  # initialize
 
 lbframe_hwflowcontrol = tk.LabelFrame(frame_choose_options, text="Hardware Flow Control", padx=5, pady=5)
 
-rd_hw_none = Radiobutton(lbframe_hwflowcontrol, text="None", variable=val_hwflowcontrol, value=0).grid(column=0, row=0,
-                                                                                                       sticky='W')
-rd_hw_dtr_dsr = Radiobutton(lbframe_hwflowcontrol, text="DTR/DSR", variable=val_hwflowcontrol, value=1).grid(column=0,
-                                                                                                             row=1,
-                                                                                                             sticky='W')
-rd_hw_rts_cts = Radiobutton(lbframe_hwflowcontrol, text="RTS/CTS", variable=val_hwflowcontrol, value=2).grid(column=0,
-                                                                                                             row=2,
-                                                                                                             sticky='W')
-rd_hw_rs485_rts = Radiobutton(lbframe_hwflowcontrol, text="RS485-RTS", variable=val_hwflowcontrol, value=3).grid(
-    column=0, row=3, sticky='W')
-# val_hwflowcontrol.set(2)
-
+rd_hw_none = Radiobutton(lbframe_hwflowcontrol, text="None",variable=val_hwflowcontrol,
+                         value=0).grid(column=0, row=0,sticky='W')
+rd_hw_dtr_dsr = Radiobutton(lbframe_hwflowcontrol, text="DTR/DSR", variable=val_hwflowcontrol,
+                            value=1).grid(column=0,row=1,sticky='W')
+rd_hw_rts_cts = Radiobutton(lbframe_hwflowcontrol, text="RTS/CTS", variable=val_hwflowcontrol,
+                            value=2).grid(column=0,row=2,sticky='W')
+rd_hw_rs485_rts = Radiobutton(lbframe_hwflowcontrol, text="RS485-RTS", variable=val_hwflowcontrol,
+                              value=3).grid(column=0, row=3, sticky='W')
 
 val_xonxoff = tk.IntVar()
 val_xonxoff.set(0)  # initialize
@@ -140,10 +128,14 @@ val_trail.set(ENDTRAIL.SLASH_N)  # initialize
 
 lbframe_trail = tk.LabelFrame(frame_choose_options, text="Trail", padx=5, pady=5)
 
-rd_r = Radiobutton(lbframe_trail, text="\\n", variable=val_trail, value=ENDTRAIL.SLASH_N).grid(column=0, row=0, sticky='W')
-rd_n = Radiobutton(lbframe_trail, text="\\r", variable=val_trail, value=ENDTRAIL.SLASH_R).grid(column=1, row=0, sticky='W')
-rd_nr = Radiobutton(lbframe_trail, text="\\r\\n", variable=val_trail, value=ENDTRAIL.WINDOWS_SLASH_RN).grid(column=0, row=1, sticky='W')
-rd_notrail = Radiobutton(lbframe_trail, text="non", variable=val_trail, value=ENDTRAIL.NOTHING).grid(column=1, row=1, sticky='W')
+rd_r = Radiobutton(lbframe_trail, text="\\n", variable=val_trail,
+                   value=ENDTRAIL.SLASH_N).grid(column=0, row=0, sticky='W')
+rd_n = Radiobutton(lbframe_trail, text="\\r", variable=val_trail,
+                   value=ENDTRAIL.SLASH_R).grid(column=1, row=0, sticky='W')
+rd_nr = Radiobutton(lbframe_trail, text="\\r\\n", variable=val_trail,
+                    value=ENDTRAIL.WINDOWS_SLASH_RN).grid(column=0, row=1, sticky='W')
+rd_notrail = Radiobutton(lbframe_trail, text="non", variable=val_trail,
+                         value=ENDTRAIL.NOTHING).grid(column=1, row=1, sticky='W')
 
 
 
@@ -188,8 +180,9 @@ def connect_to_port(port_number, baud):
     dsrdtr (bool) – Enable hardware (DSR/DTR) flow control.
     write_timeout (float) – Set a write timeout value.
     inter_byte_timeout (float) – Inter-character timeout, None to disable (default).
-    exclusive (bool) – Set exclusive access mode (POSIX only). A port cannot be opened in exclusive access mode if it is already open in exclusive access mode.
-        """
+    exclusive (bool) – Set exclusive access mode (POSIX only). A port cannot be opened in exclusive access mode if it is
+    already open in exclusive access mode.
+    """
     try:
         vtimeout = val_timeout.get()
 
@@ -207,7 +200,8 @@ def connect_to_port(port_number, baud):
             vrtscts = 1
         elif val_hwflowcontrol.get() == 3:
             vdsrdtr = 1
-        print(val_databits.get())
+
+
         serial_port = serial.Serial(port=port_number, baudrate=baud, bytesize=val_databits.get(),
                                     parity=val_parity.get(), stopbits=val_stopbits.get(),
                                     timeout=vtimeout, xonxoff=val_xonxoff.get(), rtscts=vrtscts, dsrdtr=vdsrdtr)
