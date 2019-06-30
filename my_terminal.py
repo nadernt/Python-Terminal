@@ -21,11 +21,6 @@ class ENDTRAIL():
     NOTHING = ''
 
 
-def thread_function(name):
-    logging.info("Thread %s: starting", name)
-    time.sleep(2)
-    logging.info("Thread %s: finishing", name)
-
 
 serial_port = serial.Serial()
 
@@ -148,7 +143,7 @@ for x in range(1, 61):
 sp_timeout = Spinbox(frame_sendto_port, state='readonly', values=timeout, textvariable=val_timeout)
 val_timeout.set("Wait Forever")
 
-txt_logs = scrolledtext.ScrolledText(frame_view_log, width=48,height=35)
+txt_logs = scrolledtext.ScrolledText(frame_view_log, width=48,height=36)
 
 
 def handle_data(data):
@@ -288,8 +283,9 @@ def txt_send_str_event(event):
 
 txt_send_command = tk.Entry(frame_sendto_port, textvariable=write_string, width=55)
 txt_send_command.bind('<Key>', txt_send_str_event)
+txt_send_command.focus_set()
 
-btn_send_command = Button(frame_sendto_port, text="Start", command=btn_send_str_event)
+btn_send_command = Button(frame_sendto_port, text="Send", command=btn_send_str_event)
 
 
 def on_close():

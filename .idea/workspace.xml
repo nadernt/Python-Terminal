@@ -13,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/my_terminal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2873">
-              <caret line="169" column="4" selection-start-line="169" selection-start-column="4" selection-end-line="169" selection-end-column="4" />
+            <state relative-caret-position="136">
+              <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -78,11 +78,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>baud</find>
-      <find>group</find>
-      <find>lb_bauderates</find>
-      <find>lbframe_databits</find>
-      <find>spin</find>
       <find>read</find>
       <find>var_timeout</find>
       <find>timeout</find>
@@ -108,6 +103,11 @@
       <find>\r</find>
       <find>val_trail</find>
       <find>print</find>
+      <find>thread_function</find>
+      <find>start</find>
+      <find>scroll</find>
+      <find>txt</find>
+      <find>scrol</find>
     </findStrings>
     <replaceStrings>
       <replace>serial_port</replace>
@@ -350,8 +350,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/my_terminal.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2873">
-          <caret line="169" column="4" selection-start-line="169" selection-start-column="4" selection-end-line="169" selection-end-column="4" />
+        <state relative-caret-position="136">
+          <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
