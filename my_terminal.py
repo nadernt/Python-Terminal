@@ -1,6 +1,5 @@
 from enum import Enum
 from tkinter.ttk import Label, Button, Combobox, Radiobutton, Spinbox
-
 import serial
 from serial.tools import list_ports
 from tkinter import Tk, StringVar, ttk, messagebox
@@ -297,8 +296,6 @@ def on_close():
         root.destroy()
 
 
-# buttonA0.grid(column = 0, row = 0, rowspan = 5, sticky = NE+SW)
-# buttonB0.grid(column = 0, row = 5, columnspan = 2, sticky = E+W)
 cb_ports.grid(column=0, row=0, sticky='W')
 btn_start_stop.grid(column=1, row=0)
 lb_bauderates.grid(column=2, row=0)
